@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:#050b18; --bg2:#0a1628; --bg3:#0f1f38; --bg4:#162540;
+  --glass:rgba(255,255,255,0.04); --glass2:rgba(255,255,255,0.08);
+  --border:rgba(255,255,255,0.08); --border2:rgba(255,255,255,0.16);
+  --text:#f0f4ff; --text2:#8ba3c7; --text3:#4a6a9a;
+  --teal:#00d4aa; --blue:#4a9eff; --purple:#a78bfa;
+  --red:#ff6b7a; --amber:#fbbf24; --green:#34d399;
+}
+
+.light {
+  --bg:#f5f7fa; --bg2:#ffffff; --bg3:#f0f2f5; --bg4:#e2e8f0;
+  --glass:rgba(0,0,0,0.02); --glass2:rgba(0,0,0,0.05);
+  --border:rgba(0,0,0,0.08); --border2:rgba(0,0,0,0.14);
+  --text:#0f172a; --text2:#475569; --text3:#94a3b8;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;min-height:100vh;font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.font-syne{font-family:'Syne',sans-serif}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:3px}
+
+/* Utilities */
+.gradient-text{background:linear-gradient(135deg,var(--teal),var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.glass-card{background:var(--glass);border:1px solid var(--border);border-radius:20px;transition:all .25s}
+.glass-card:hover{border-color:var(--border2);background:var(--glass2)}
+.teal-glow{box-shadow:0 0 40px rgba(0,212,170,.15)}
+.blue-glow{box-shadow:0 0 40px rgba(74,158,255,.15)}
+.badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:100px;font-size:12px;font-weight:500}
+.badge-teal{background:rgba(0,212,170,.12);color:var(--teal);border:1px solid rgba(0,212,170,.2)}
+.badge-blue{background:rgba(74,158,255,.12);color:var(--blue);border:1px solid rgba(74,158,255,.2)}
+.badge-red{background:rgba(255,107,122,.1);color:var(--red);border:1px solid rgba(255,107,122,.2)}
+.badge-amber{background:rgba(251,191,36,.1);color:var(--amber);border:1px solid rgba(251,191,36,.2)}
+.badge-green{background:rgba(52,211,153,.1);color:var(--green);border:1px solid rgba(52,211,153,.2)}
+.badge-purple{background:rgba(167,139,250,.12);color:var(--purple);border:1px solid rgba(167,139,250,.2)}
+.skeleton{border-radius:8px;background:linear-gradient(90deg,var(--bg3) 25%,var(--bg4) 50%,var(--bg3) 75%);background-size:800px 100%;animation:shimmer 1.5s infinite}
+
+/* Keyframes */
+@keyframes shimmer{0%{background-position:-400px 0}100%{background-position:400px 0}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes waveform{0%,100%{height:5px}50%{height:24px}}
+
+.animate-float{animation:float 3.5s ease-in-out infinite}
+.animate-breathe{animation:breathe 3s ease-in-out infinite}
+.animate-blink{animation:blink 1.5s ease-in-out infinite}
+.animate-slide-up{animation:slideUp .5s ease both}
+.animate-fade-in{animation:fadeIn .4s ease both}
+
+/* Selection color */
+::selection{background:rgba(0,212,170,.25);color:var(--text)}
+
+/* Focus rings */
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+
+/* Smooth scroll */
+html{scroll-behavior:smooth}
+
+/* ── Performance & Transitions ──────────────────────────────────────────── */
+* { -webkit-tap-highlight-color: transparent; }
+img, video { display: block; max-width: 100%; }
+
+/* GPU compositing for animated elements */
+.glass-card, [data-motion] { will-change: transform; }
+
+/* ── Better spacing system ──────────────────────────────────────────────── */
+.page-gap { display: grid; gap: 16px; }
+.row-gap { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ── Typography scale ───────────────────────────────────────────────────── */
+.text-xs  { font-size: 11px; }
+.text-sm  { font-size: 13px; }
+.text-md  { font-size: 15px; }
+.text-lg  { font-size: 18px; }
+.text-xl  { font-size: 22px; }
+.text-2xl { font-size: 28px; }
+
+/* ── Smooth page transitions ────────────────────────────────────────────── */
+.page-enter { animation: slideUp .35s ease both; }
+
+/* ── Loading skeleton pulse ─────────────────────────────────────────────── */
+@keyframes pulse { 0%,100%{opacity:.6}50%{opacity:1} }
+
+/* ── Responsive layout ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hidden-mobile { display: none !important; }
+  .main-content  { margin-left: 0 !important; }
+  .mobile-menu-btn { display: flex !important; }
+
+  /* Tighter padding on mobile */
+  .main-content > div { padding: 16px !important; }
+
+  /* Stack grids on mobile */
+  [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content > div { padding: 12px !important; }
+  h1 { font-size: 22px !important; }
+}
+
+/* ── Badge variants extras ──────────────────────────────────────────────── */
+.badge-orange { background: rgba(251,146,60,.12); color: #fb923c; border: 1px solid rgba(251,146,60,.25); }
+
+/* ── Card hover improvements ────────────────────────────────────────────── */
+.glass-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Tooltip improvements ───────────────────────────────────────────────── */
+.recharts-tooltip-wrapper { z-index: 9999; }
+
+/* ── Progress bar animation ─────────────────────────────────────────────── */
+@keyframes progress-fill {
+  from { width: 0; }
+}
+
+/* ── Improved input styles ──────────────────────────────────────────────── */
+input, textarea, select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* ── Elder mode bigger hit targets ──────────────────────────────────────── */
+.elder-mode button { min-height: 48px; }
+.elder-mode input  { min-height: 52px; font-size: 18px !important; }
+
+/* ── Scrollable tabs ────────────────────────────────────────────────────── */
+.scroll-tabs {
+  display: flex; gap: 8px;
+  overflow-x: auto; padding-bottom: 4px;
+  scrollbar-width: none;
+}
+.scroll-tabs::-webkit-scrollbar { display: none; }
+
+/* ── Heatmap cells ──────────────────────────────────────────────────────── */
+.heatmap-cell {
+  border-radius: 3px;
+  transition: transform .15s;
+}
+.heatmap-cell:hover { transform: scale(1.4); }
+
+/* ── Noscript / error boundary ──────────────────────────────────────────── */
+.error-boundary {
+  display: grid; place-items: center; min-height: 200px;
+  color: var(--red); font-size: 14px; gap: 8px;
+}

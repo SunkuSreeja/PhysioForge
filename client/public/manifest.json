@@ -1,0 +1,45 @@
+{
+  "name": "PhysioForge — AI Physiotherapy Assistant",
+  "short_name": "PhysioForge",
+  "description": "AI-guided physiotherapy recovery: exercises, posture tracking, remedies, teleconsult.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#050b18",
+  "theme_color": "#050b18",
+  "lang": "en",
+  "categories": ["health", "medical", "fitness"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Exercises",
+      "url": "/patient/exercises",
+      "description": "View your prescribed exercises"
+    },
+    {
+      "name": "Relief Remedies",
+      "url": "/patient/remedies",
+      "description": "Home remedies for pain relief"
+    },
+    {
+      "name": "Emergency",
+      "url": "/patient/emergency",
+      "description": "Emergency contacts and guidance"
+    }
+  ]
+}

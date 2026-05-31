@@ -1,0 +1,179 @@
+<svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0d1f35"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d4aa"/>
+      <stop offset="100%" stop-color="#00b8d9"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff"/>
+      <stop offset="100%" stop-color="#6b7cff"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" fill="#00d4aa" font-size="18" font-weight="700" filter="url(#glow)">PhysioForge — System Architecture</text>
+  <text x="450" y="56" text-anchor="middle" fill="#4a7a8a" font-size="11">Frontend · AI Engine · Analytics · PWA · Backend API</text>
+
+  <!-- ── USER LAYER ─────────────────────────────────────────── -->
+  <rect x="20" y="72" width="860" height="68" rx="12" fill="#0e2038" stroke="#1e3a5a" stroke-width="1.5"/>
+  <text x="450" y="93" text-anchor="middle" fill="#64748b" font-size="10" font-weight="600" letter-spacing="2">USER LAYER</text>
+  <!-- User roles -->
+  <rect x="80"  y="100" width="140" height="28" rx="8" fill="#00d4aa22" stroke="#00d4aa55" stroke-width="1"/>
+  <text x="150" y="119" text-anchor="middle" fill="#00d4aa" font-size="12" font-weight="600">👤 Patient</text>
+  <rect x="380" y="100" width="140" height="28" rx="8" fill="#4a9eff22" stroke="#4a9eff55" stroke-width="1"/>
+  <text x="450" y="119" text-anchor="middle" fill="#4a9eff" font-size="12" font-weight="600">🩺 Doctor</text>
+  <rect x="680" y="100" width="140" height="28" rx="8" fill="#a78bfa22" stroke="#a78bfa55" stroke-width="1"/>
+  <text x="750" y="119" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="600">🧑‍🤝‍🧑 Caretaker</text>
+
+  <!-- ── FRONTEND LAYER ─────────────────────────────────────── -->
+  <rect x="20" y="158" width="860" height="180" rx="12" fill="#0c1a2e" stroke="#1a3050" stroke-width="1.5"/>
+  <text x="450" y="178" text-anchor="middle" fill="#64748b" font-size="10" font-weight="600" letter-spacing="2">REACT FRONTEND (Vite · React 18 · React Router v6)</text>
+
+  <!-- Frontend boxes -->
+  <rect x="36"  y="185" width="118" height="50" rx="8" fill="#00d4aa18" stroke="#00d4aa40" stroke-width="1"/>
+  <text x="95"  y="208" text-anchor="middle" fill="#00d4aa" font-size="11" font-weight="700">Dashboard</text>
+  <text x="95"  y="224" text-anchor="middle" fill="#4a7a8a" font-size="9">Rings · Streak</text>
+
+  <rect x="164" y="185" width="118" height="50" rx="8" fill="#4a9eff18" stroke="#4a9eff40" stroke-width="1"/>
+  <text x="223" y="208" text-anchor="middle" fill="#4a9eff" font-size="11" font-weight="700">Exercises</text>
+  <text x="223" y="224" text-anchor="middle" fill="#4a7a8a" font-size="9">Library · Tracking</text>
+
+  <rect x="292" y="185" width="118" height="50" rx="8" fill="#ff6b7a18" stroke="#ff6b7a40" stroke-width="1"/>
+  <text x="351" y="208" text-anchor="middle" fill="#ff6b7a" font-size="11" font-weight="700">AI Posture</text>
+  <text x="351" y="224" text-anchor="middle" fill="#4a7a8a" font-size="9">MediaPipe · Angles</text>
+
+  <rect x="420" y="185" width="118" height="50" rx="8" fill="#fbbf2418" stroke="#fbbf2440" stroke-width="1"/>
+  <text x="479" y="208" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700">Analytics</text>
+  <text x="479" y="224" text-anchor="middle" fill="#4a7a8a" font-size="9">7 Tabs · Recharts</text>
+
+  <rect x="548" y="185" width="118" height="50" rx="8" fill="#34d39918" stroke="#34d39940" stroke-width="1"/>
+  <text x="607" y="208" text-anchor="middle" fill="#34d399" font-size="11" font-weight="700">Remedies</text>
+  <text x="607" y="224" text-anchor="middle" fill="#4a7a8a" font-size="9">Pain Areas · Types</text>
+
+  <rect x="676" y="185" width="118" height="50" rx="8" fill="#a78bfa18" stroke="#a78bfa40" stroke-width="1"/>
+  <text x="735" y="208" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="700">Reminders</text>
+  <text x="735" y="224" text-anchor="middle" fill="#4a7a8a" font-size="9">Browser Notifs</text>
+
+  <!-- Row 2 -->
+  <rect x="36"  y="247" width="118" height="50" rx="8" fill="#00b8d918" stroke="#00b8d940" stroke-width="1"/>
+  <text x="95"  y="270" text-anchor="middle" fill="#00b8d9" font-size="11" font-weight="700">AI Assistant</text>
+  <text x="95"  y="286" text-anchor="middle" fill="#4a7a8a" font-size="9">Voice · 3 Languages</text>
+
+  <rect x="164" y="247" width="118" height="50" rx="8" fill="#fb923c18" stroke="#fb923c40" stroke-width="1"/>
+  <text x="223" y="270" text-anchor="middle" fill="#fb923c" font-size="11" font-weight="700">Teleconsult</text>
+  <text x="223" y="286" text-anchor="middle" fill="#4a7a8a" font-size="9">Video · Booking</text>
+
+  <rect x="292" y="247" width="118" height="50" rx="8" fill="#f4727218" stroke="#f4727240" stroke-width="1"/>
+  <text x="351" y="270" text-anchor="middle" fill="#f47272" font-size="11" font-weight="700">Emergency</text>
+  <text x="351" y="286" text-anchor="middle" fill="#4a7a8a" font-size="9">SOS · Contacts</text>
+
+  <rect x="420" y="247" width="118" height="50" rx="8" fill="#6b7cff18" stroke="#6b7cff40" stroke-width="1"/>
+  <text x="479" y="270" text-anchor="middle" fill="#6b7cff" font-size="11" font-weight="700">Recovery Feed</text>
+  <text x="479" y="286" text-anchor="middle" fill="#4a7a8a" font-size="9">Articles · Tips</text>
+
+  <rect x="548" y="247" width="118" height="50" rx="8" fill="#ec489918" stroke="#ec489940" stroke-width="1"/>
+  <text x="607" y="270" text-anchor="middle" fill="#ec4899" font-size="11" font-weight="700">Family Connect</text>
+  <text x="607" y="286" text-anchor="middle" fill="#4a7a8a" font-size="9">Caretaker Portal</text>
+
+  <rect x="676" y="247" width="118" height="50" rx="8" fill="#10b98118" stroke="#10b98140" stroke-width="1"/>
+  <text x="735" y="270" text-anchor="middle" fill="#10b981" font-size="11" font-weight="700">Elder Mode</text>
+  <text x="735" y="286" text-anchor="middle" fill="#4a7a8a" font-size="9">Larger UI · Voice</text>
+
+  <!-- ── CLIENT SERVICES LAYER ───────────────────────────── -->
+  <rect x="20" y="356" width="860" height="100" rx="12" fill="#0a1a2e" stroke="#162840" stroke-width="1.5"/>
+  <text x="450" y="375" text-anchor="middle" fill="#64748b" font-size="10" font-weight="600" letter-spacing="2">CLIENT SERVICES (localStorage · Context API · Service Workers)</text>
+
+  <rect x="36"  y="383" width="155" height="62" rx="8" fill="#00d4aa10" stroke="#00d4aa30" stroke-width="1"/>
+  <text x="114" y="404" text-anchor="middle" fill="#00d4aa" font-size="11" font-weight="700">📊 Analytics Engine</text>
+  <text x="114" y="420" text-anchor="middle" fill="#4a7a8a" font-size="9">8 localStorage Keys</text>
+  <text x="114" y="436" text-anchor="middle" fill="#4a7a8a" font-size="9">Streak · Pain · Posture</text>
+
+  <rect x="201" y="383" width="155" height="62" rx="8" fill="#4a9eff10" stroke="#4a9eff30" stroke-width="1"/>
+  <text x="279" y="404" text-anchor="middle" fill="#4a9eff" font-size="11" font-weight="700">🤖 AI / NLP Engine</text>
+  <text x="279" y="420" text-anchor="middle" fill="#4a7a8a" font-size="9">physioAI.js</text>
+  <text x="279" y="436" text-anchor="middle" fill="#4a7a8a" font-size="9">Intent · i18n · TTS/STT</text>
+
+  <rect x="366" y="383" width="155" height="62" rx="8" fill="#a78bfa10" stroke="#a78bfa30" stroke-width="1"/>
+  <text x="444" y="404" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="700">🔔 Reminder Sched.</text>
+  <text x="444" y="420" text-anchor="middle" fill="#4a7a8a" font-size="9">reminderService.js</text>
+  <text x="444" y="436" text-anchor="middle" fill="#4a7a8a" font-size="9">30s Poll · Notif API</text>
+
+  <rect x="531" y="383" width="155" height="62" rx="8" fill="#fbbf2410" stroke="#fbbf2430" stroke-width="1"/>
+  <text x="609" y="404" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700">📶 PWA / Offline</text>
+  <text x="609" y="420" text-anchor="middle" fill="#4a7a8a" font-size="9">Service Worker</text>
+  <text x="609" y="436" text-anchor="middle" fill="#4a7a8a" font-size="9">Cache First · Manifest</text>
+
+  <rect x="696" y="383" width="168" height="62" rx="8" fill="#34d39910" stroke="#34d39930" stroke-width="1"/>
+  <text x="780" y="404" text-anchor="middle" fill="#34d399" font-size="11" font-weight="700">🎯 MediaPipe Pose</text>
+  <text x="780" y="420" text-anchor="middle" fill="#4a7a8a" font-size="9">17-Joint Skeleton</text>
+  <text x="780" y="436" text-anchor="middle" fill="#4a7a8a" font-size="9">Angle Calc · Fallback</text>
+
+  <!-- ── BACKEND LAYER ──────────────────────────────────────── -->
+  <rect x="20" y="474" width="420" height="130" rx="12" fill="#091628" stroke="#142236" stroke-width="1.5"/>
+  <text x="230" y="493" text-anchor="middle" fill="#64748b" font-size="10" font-weight="600" letter-spacing="2">BACKEND API (Node.js · Express · MongoDB)</text>
+
+  <rect x="36"  y="502" width="115" height="45" rx="8" fill="#4a9eff10" stroke="#4a9eff30"/>
+  <text x="94"  y="523" text-anchor="middle" fill="#4a9eff" font-size="10" font-weight="700">🔐 Auth</text>
+  <text x="94"  y="537" text-anchor="middle" fill="#4a7a8a" font-size="9">JWT · bcrypt</text>
+
+  <rect x="161" y="502" width="115" height="45" rx="8" fill="#00d4aa10" stroke="#00d4aa30"/>
+  <text x="219" y="523" text-anchor="middle" fill="#00d4aa" font-size="10" font-weight="700">👥 Patients</text>
+  <text x="219" y="537" text-anchor="middle" fill="#4a7a8a" font-size="9">CRUD · Progress</text>
+
+  <rect x="286" y="502" width="138" height="45" rx="8" fill="#a78bfa10" stroke="#a78bfa30"/>
+  <text x="355" y="523" text-anchor="middle" fill="#a78bfa" font-size="10" font-weight="700">📅 Appointments</text>
+  <text x="355" y="537" text-anchor="middle" fill="#4a7a8a" font-size="9">Scheduling · Slots</text>
+
+  <rect x="36" y="558" width="388" height="36" rx="8" fill="#fbbf2410" stroke="#fbbf2430"/>
+  <text x="230" y="575" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="600">MongoDB (User · Exercise · Progress · Appointment models)</text>
+  <text x="230" y="588" text-anchor="middle" fill="#4a7a8a" font-size="9">Optional — demo mode available without database</text>
+
+  <!-- ── EXTERNAL SERVICES ─────────────────────────────────── -->
+  <rect x="460" y="474" width="420" height="130" rx="12" fill="#091628" stroke="#142236" stroke-width="1.5"/>
+  <text x="670" y="493" text-anchor="middle" fill="#64748b" font-size="10" font-weight="600" letter-spacing="2">EXTERNAL SERVICES &amp; CAPABILITIES</text>
+
+  <rect x="476" y="502" width="115" height="45" rx="8" fill="#ff6b7a10" stroke="#ff6b7a30"/>
+  <text x="534" y="523" text-anchor="middle" fill="#ff6b7a" font-size="10" font-weight="700">📷 Camera API</text>
+  <text x="534" y="537" text-anchor="middle" fill="#4a7a8a" font-size="9">getUserMedia</text>
+
+  <rect x="601" y="502" width="115" height="45" rx="8" fill="#34d39910" stroke="#34d39930"/>
+  <text x="659" y="523" text-anchor="middle" fill="#34d399" font-size="10" font-weight="700">🎤 Web Speech</text>
+  <text x="659" y="537" text-anchor="middle" fill="#4a7a8a" font-size="9">STT · TTS · i18n</text>
+
+  <rect x="726" y="502" width="138" height="45" rx="8" fill="#00b8d910" stroke="#00b8d930"/>
+  <text x="795" y="523" text-anchor="middle" fill="#00b8d9" font-size="10" font-weight="700">🔔 Notif API</text>
+  <text x="795" y="537" text-anchor="middle" fill="#4a7a8a" font-size="9">Push · Permission</text>
+
+  <rect x="476" y="558" width="388" height="36" rx="8" fill="#6b7cff10" stroke="#6b7cff30"/>
+  <text x="670" y="575" text-anchor="middle" fill="#6b7cff" font-size="10" font-weight="600">MediaPipe CDN (pose landmarks model — lazy-loaded on posture start)</text>
+  <text x="670" y="588" text-anchor="middle" fill="#4a7a8a" font-size="9">Fallback: simulation mode with realistic synthetic pose data</text>
+
+  <!-- Arrows: User → Frontend -->
+  <line x1="150" y1="140" x2="150" y2="158" stroke="#00d4aa60" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="450" y1="140" x2="450" y2="158" stroke="#4a9eff60" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="750" y1="140" x2="750" y2="158" stroke="#a78bfa60" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+  <!-- Arrow: Frontend → Client Services -->
+  <line x1="450" y1="338" x2="450" y2="356" stroke="#ffffff30" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Arrow: Client Services → Backend -->
+  <line x1="230" y1="456" x2="230" y2="474" stroke="#4a9eff60" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+  <!-- Arrow: Client Services → External -->
+  <line x1="670" y1="456" x2="670" y2="474" stroke="#34d39960" stroke-width="1.5" stroke-dasharray="4,2"/>
+</svg>
